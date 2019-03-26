@@ -21,6 +21,13 @@
     //var_dump($arquivo);
 
     $nulo = null;
+
+    //Variaveis pre-definidas e array superglobais
+    //$nome = (int)$_GET["a"]; //CAST
+    //var_dump($nome);
+
+    $ip = $_SERVER["REMOTE_ADDR"];
+    echo $ip;
     
 
 ?>
