@@ -1,0 +1,9 @@
+{
+    "name": "davisonbr/composer",
+    "description": "Aula de php7",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+    	"monolog/monolog":"1.0.*"
+    }
+}
