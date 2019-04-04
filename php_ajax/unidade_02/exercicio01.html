@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Solicitacao</title>
+        <script>
+        	//uso da requisicao do ajax para browsers novos e antigos.
+        	var ajax;
+        	if (window.XMLHttpRequest){
+        		ajax = new XMLHttpRequest();    
+        	} else {
+        		ajax = new ActiveXObject("Microsoft.HXLHTTP");
+        	}
+
+        	ajax.open('GET', 'dados.txt');
+        	ajax.send();
+        	ajax.onreadystatechange = function() {
+        		
+        		if (ajax.status == 200) {
+	        		if (ajax.readyState == 3) {
+	        			console.log("Carregando");
+	        		}
+
+	        		if (ajax.readyState == 4){
+	        		console.log(ajax.responseText);
+	        		}
+        		}else {
+        			console.log("erro na operacao");
+        		}
+        	}
+        </script>
+    </head>
+
+    <body>
+    	<div id="dinamico"></div>
+        <h1></h1>
+    </body>
+</html>
